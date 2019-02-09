@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import sad from "./images/et_paassyt.svg";
 import happy from "./images/paasit.svg";
-import front from "./images/etusivu.svg";
+import front from "./images/Etusivu.svg";
 import "./App.css";
 const data = require("./data.json");
 
@@ -87,19 +87,18 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                      Sukupuoli: <br />
-                      <select name="toimii_kansanedustajana">
-                        <option value="nainen">Nainen</option>
-                        <option value="mies">Mies</option>
+                        Sukupuoli: <br /> <select name="sukupuoli">
+                        <option value="1">M</option>
+                        <option value="0">F</option>
+
                       </select>
                     </label>
                   </li>
                   <li>
                     <label>
-                      Toimin tällä hetkellä kansanedustajana:{" "}
-                      <select name="toimii_kansanedustajana">
-                        <option value="kyllä">Kyllä</option>
-                        <option value="ei">Ei</option>
+                      Toimin tällä hetkellä kansanedustajana: <select name="toimii_kansanedustajana">
+                        <option value="1">Kyllä</option>
+                        <option value="0">Ei</option>
                       </select>
                     </label>
                   </li>
@@ -117,14 +116,27 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                      Työnantaja: <br />
-                      <input type="text" name="työnantaja" />
+                      Työnantaja: <br/><select name="tyonantaja">
+                        <option value="0">Julkinen</option>
+                        <option value="1">Yksityinen</option>
+                        <option value="2">Ei työelämässä</option>
+                      </select>
                     </label>
                   </li>
                   <li>
                     <label>
-                      Ammattiasema: <br />
-                      <input type="text" name="ammattiasema" />
+                      Ammattiasema: <br /> <select name="ammattiasema">
+                        <option value="0">Korkeakoulututkintoa vaativa tehtävä </option>
+                        <option value="1">Asiantuntijatehtävä</option>
+                        <option value="2">Työntekijä </option>
+                        <option value="3">Maanviljelijä</option>
+                        <option value="4">Johtava asema</option>
+                        <option value="5">Yrittäjä</option>
+                        <option value="6">Eläkeläinen</option>
+                        <option value="7">Opiskelija</option>
+                        <option value="8">Taiteilija</option>
+                        <option value="9">Joku muu</option>
+                      </select>
                     </label>
                   </li>
                 </div>
@@ -151,11 +163,9 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                      Käytän vaaleihin rahaa:
-                      <br />
-                      <select name="käytän_vaaleihin_rahaa">
-                        <option value="kyllä">Kyllä</option>
-                        <option value="ei">Ei</option>
+                      Poliittisen puolueen jäsen: <br /> <select name="poliittisenjasen">
+                        <option value="1">Kyllä</option>
+                        <option value="0">Ei</option>
                       </select>
                     </label>
                   </li>
@@ -186,24 +196,21 @@ class App extends Component {
               </ul>
 
               <ul>
-                {data["multichoice"].map(label => {
+                {data["multichoice"].map((label, index) => {
                   return (
                     <li>
                       <label>
                         {label}:
-                        <input type="radio" name="täysin_samaa_mieltä" />
+                        <input type="radio" name={index} value="5" />Täysin samaa mieltä
                         Täysin samaa mieltä
-                        <input
-                          type="radio"
-                          name="jokseenkin_samaa_mieltä"
-                        />{" "}
+                        <input type="radio" name={index} value="4" /> Jokseenkin samaa mieltä{" "}
                         Jokseenkin samaa mieltä
-                        <input type="radio" name="jokseenkin_eri_mieltä" />{" "}
+                        <input type="radio" name={index} value="3" /> Jokseenkin eri mieltä{" "}
                         Jokseenkin eri mieltä
-                        <input type="radio" name="täysin_eri_mieltä" /> Täysin
-                        eri mieltä
-                        <input type="radio" name="ohita_kysymys" /> Ohita
+                        <input type="radio" name={index} value="2" /> Täysin eri mieltä
+                        <input type="radio" name={index} value="1" /> Ohita
                         kysymys
+
                       </label>
                     </li>
                   );
@@ -211,6 +218,7 @@ class App extends Component {
               </ul>
 
               <ul>
+
                 {data["yesno"].map(label => {
                   return (
                     <li>
@@ -219,6 +227,7 @@ class App extends Component {
                         <select>
                           <option value="kyllä">Kyllä</option>
                           <option value="ei">Ei</option>
+
                         </select>
                       </label>
                     </li>
@@ -232,6 +241,7 @@ class App extends Component {
               <p className="sub-title">Terveys</p>
               <p className="sub-title">Tulevaisuus</p>
               <p className="sub-title">Äänestykset</p>
+              <input type="submit" value="Submit"></input>
             </form>
             <button className="submit" onClick={this.onSubmit}>
               Katso tulos
