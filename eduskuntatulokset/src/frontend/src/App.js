@@ -64,6 +64,7 @@ class App extends Component {
           <div className="questions">
             <form>
               <p className="sub-title">Perustiedot</p>
+<<<<<<< Updated upstream
 
               <ul>
                 <div className="left">
@@ -195,6 +196,130 @@ class App extends Component {
                 </div>
               </ul>
 
+=======
+              <div className="container">
+                <ul>
+                  <div className="left">
+                    <li>
+                      <label>
+                        Vaalipiiri: <br />
+                        <input type="text" name="vaalipiiri" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Puolue: <br />
+                        <input type="text" name="puolue" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Ikä: <br />
+                        <input type="text" name="ikä" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Sukupuoli: <br />
+                        <select name="toimii_kansanedustajana">
+                          <option value="nainen">Nainen</option>
+                          <option value="mies">Mies</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Toimin tällä hetkellä kansanedustajana:
+                        <br />
+                        <select name="toimii_kansanedustajana">
+                          <option value="kyllä">Kyllä</option>
+                          <option value="ei">Ei</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Kotikunta: <br />
+                        <input type="text" name="kotikunta" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Äidinkieli: <br />
+                        <input type="text" name="äidinkieli" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Työnantaja: <br />
+                        <input type="text" name="työnantaja" />
+                      </label>
+                    </li>
+                  </div>
+                  <div className="right">
+                    <li>
+                      <label>
+                        Ammattiasema: <br />
+                        <input type="text" name="ammattiasema" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Koulutus: <br />
+                        <input type="text" name="koulutus" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Uskonnollinen yhteisö:
+                        <br />
+                        <input type="text" name="uskonnollinen_yhteisö" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Poliittinen kokemus:
+                        <br />
+                        <input type="text" name="poliittinen_kokemus" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Käytän vaaleihin rahaa:
+                        <br />
+                        <select name="käytän_vaaleihin_rahaa">
+                          <option value="kyllä">Kyllä</option>
+                          <option value="ei">Ei</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Käytän vaaleihin rahaa:
+                        <br />
+                        <input type="text" name="käytän_vaaleihin_rahaa" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Ulkopuolisen rahoituksen osuus:
+                        <br />
+                        <input
+                          type="text"
+                          name="ulkopuolisen_rahoituksen_osuus"
+                        />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Vuositulot: <br />
+                        <input type="text" name="vuositulot" />
+                      </label>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+>>>>>>> Stashed changes
               <ul>
                 {data["multichoice"].map((label, index) => {
                   return (
@@ -234,6 +359,7 @@ class App extends Component {
                   );
                 })}
               </ul>
+<<<<<<< Updated upstream
 
               <p className="sub-title">Työ</p>
               <p className="sub-title">Talous</p>
@@ -242,8 +368,10 @@ class App extends Component {
               <p className="sub-title">Tulevaisuus</p>
               <p className="sub-title">Äänestykset</p>
               <input type="submit" value="Submit"></input>
+=======
+>>>>>>> Stashed changes
             </form>
-            <button className="submit" onClick={this.onSubmit}>
+            <button className="submit begin" onClick={this.onSubmit}>
               Katso tulos
             </button>
           </div>
@@ -252,10 +380,14 @@ class App extends Component {
           {this.state.gotin ? (
             <div className="succeeded">
               <h1>Onneksi olkoon</h1>
+              <img src={happy} className="img" />
+              <div className="right">asd</div>
             </div>
           ) : (
             <div className="failed">
               <h1>Valitettavasti et olisi päässyt eduskuntaan</h1>
+              <img src={sad} className="img" />
+              <div className="right">asd</div>
             </div>
           )}
         </div>
