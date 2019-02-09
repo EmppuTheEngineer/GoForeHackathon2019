@@ -3,14 +3,27 @@ package com.example.eduskuntatulokset.models;
 import java.util.List;
 
 public class Answers {
-    private List <String> answers;
+    private String decision;
+    private int score;
 
-    public List<String> getAnswers() {
-        return answers;
+    public Answers(String decision, int score) {
+        this.decision = decision;
+        this.score = score;
     }
 
-    public void setAnswers(List<String> ans) {
-        answers = ans;
+    public int getScore() {
+        return score;
     }
-    
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public String getDecision() {
+        return decision;
+    }
+
+    public void setDecision(String decision) {
+        this.decision = decision;
+    }
 }
