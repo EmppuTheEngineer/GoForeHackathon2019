@@ -260,15 +260,28 @@ class App extends Component {
         <div className="score" id="score">
           {this.state.gotin ? (
             <div className="succeeded">
-              <h1>Onneksi olkoon</h1>
+              <h1>Onneksi olkoon, pääsit eduskuntaan!</h1>
               <img src={happy} className="img" />
-              <div className="right">asd</div>
+              <div className="right">
+                <p>
+                  Vastaustesi perusteella olisit ollut loistava ehdokas vuoden
+                  2015 vaaleissa.
+                </p>
+              </div>
+              <h3>Eduskunta sopivuutesi on</h3> <h1>83%</h1>
             </div>
           ) : (
             <div className="failed">
               <h1>Valitettavasti et olisi päässyt eduskuntaan</h1>
               <img src={sad} className="img" />
-              <div className="right">asd</div>
+              <div className="right">
+                <p>
+                  Vastaustesi perusteella et olisi menestynyt vuoden 2015
+                  vaaleissa.
+                </p>
+              </div>
+              <h3>Eduskuntasopivuutesi on vain</h3>
+              <h1>24%</h1>
             </div>
           )}
         </div>

@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.028730e5.chunk.css",
-  "main.js": "/static/js/main.b0c458f2.chunk.js",
-  "main.js.map": "/static/js/main.b0c458f2.chunk.js.map",
+  "main.js": "/static/js/main.3c578fa9.chunk.js",
+  "main.js.map": "/static/js/main.3c578fa9.chunk.js.map",
   "static/js/1.3080dc9d.chunk.js": "/static/js/1.3080dc9d.chunk.js",
   "static/js/1.3080dc9d.chunk.js.map": "/static/js/1.3080dc9d.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -11,6 +11,6 @@
   "static/media/etusivu.svg": "/static/media/etusivu.5bb8b92c.svg",
   "static/media/paasit.svg": "/static/media/paasit.ac7c124e.svg",
   "index.html": "/index.html",
-  "precache-manifest.ddce696a897068a6fa749db3698c97a6.js": "/precache-manifest.ddce696a897068a6fa749db3698c97a6.js",
+  "precache-manifest.3654c235ade045e029e76c5990ab90c3.js": "/precache-manifest.3654c235ade045e029e76c5990ab90c3.js",
   "service-worker.js": "/service-worker.js"
 }
