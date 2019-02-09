@@ -124,11 +124,4 @@ select {
   height: 500px;
 }
 
-table th {
-  padding-right: 1em;
-}
-
-
-table td input {
-  margin: 0 2em;
-}
+td input {width: 50px;}

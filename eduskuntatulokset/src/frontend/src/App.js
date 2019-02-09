@@ -65,141 +65,143 @@ class App extends Component {
             <form>
               <p className="sub-title">Perustiedot</p>
 
-              <ul>
-                <div className="left">
-                  <li>
-                    <label>
-                      Vaalipiiri: <br />
-                      <input type="text" name="vaalipiiri" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Puolue: <br />
-                      <input type="text" name="puolue" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Ikä: <br />
-                      <input type="text" name="ikä" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Sukupuoli: <br />{" "}
-                      <select name="sukupuoli">
-                        <option value="1">M</option>
-                        <option value="0">F</option>
-                      </select>
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Toimin tällä hetkellä kansanedustajana:{" "}
-                      <select name="toimii_kansanedustajana">
-                        <option value="1">Kyllä</option>
-                        <option value="0">Ei</option>
-                      </select>
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Kotikunta: <br />
-                      <input type="text" name="kotikunta" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Äidinkieli: <br />
-                      <input type="text" name="äidinkieli" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Työnantaja: <br />
-                      <select name="tyonantaja">
-                        <option value="0">Julkinen</option>
-                        <option value="1">Yksityinen</option>
-                        <option value="2">Ei työelämässä</option>
-                      </select>
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Ammattiasema: <br />{" "}
-                      <select name="ammattiasema">
-                        <option value="0">
-                          Korkeakoulututkintoa vaativa tehtävä{" "}
-                        </option>
-                        <option value="1">Asiantuntijatehtävä</option>
-                        <option value="2">Työntekijä </option>
-                        <option value="3">Maanviljelijä</option>
-                        <option value="4">Johtava asema</option>
-                        <option value="5">Yrittäjä</option>
-                        <option value="6">Eläkeläinen</option>
-                        <option value="7">Opiskelija</option>
-                        <option value="8">Taiteilija</option>
-                        <option value="9">Joku muu</option>
-                      </select>
-                    </label>
-                  </li>
-                </div>
-                <div className="right">
-                  <li>
-                    <label>
-                      Koulutus: <br />
-                      <input type="text" name="koulutus" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Uskonnollinen yhteisö:
-                      <br />
-                      <input type="text" name="uskonnollinen_yhteisö" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Poliittinen kokemus:
-                      <br />
-                      <input type="text" name="poliittinen_kokemus" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Poliittisen puolueen jäsen: <br />{" "}
-                      <select name="poliittisenjasen">
-                        <option value="1">Kyllä</option>
-                        <option value="0">Ei</option>
-                      </select>
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Käytän vaaleihin rahaa:
-                      <br />
-                      <input type="text" name="käytän_vaaleihin_rahaa" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Ulkopuolisen rahoituksen osuus:
-                      <br />
-                      <input
-                        type="text"
-                        name="ulkopuolisen_rahoituksen_osuus"
-                      />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Vuositulot: <br />
-                      <input type="text" name="vuositulot" />
-                    </label>
-                  </li>
-                </div>
-              </ul>
+              <div className="container">
+                <ul>
+                  <div className="left">
+                    <li>
+                      <label>
+                        Vaalipiiri: <br />
+                        <input type="text" name="vaalipiiri" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Puolue: <br />
+                        <input type="text" name="puolue" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Ikä: <br />
+                        <input type="text" name="ikä" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Sukupuoli: <br />{" "}
+                        <select name="sukupuoli">
+                          <option value="1">M</option>
+                          <option value="0">F</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Toimin tällä hetkellä kansanedustajana:{" "}
+                        <select name="toimii_kansanedustajana">
+                          <option value="1">Kyllä</option>
+                          <option value="0">Ei</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Kotikunta: <br />
+                        <input type="text" name="kotikunta" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Äidinkieli: <br />
+                        <input type="text" name="äidinkieli" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Työnantaja: <br />
+                        <select name="tyonantaja">
+                          <option value="0">Julkinen</option>
+                          <option value="1">Yksityinen</option>
+                          <option value="2">Ei työelämässä</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Ammattiasema: <br />{" "}
+                        <select name="ammattiasema">
+                          <option value="0">
+                            Korkeakoulututkintoa vaativa tehtävä{" "}
+                          </option>
+                          <option value="1">Asiantuntijatehtävä</option>
+                          <option value="2">Työntekijä </option>
+                          <option value="3">Maanviljelijä</option>
+                          <option value="4">Johtava asema</option>
+                          <option value="5">Yrittäjä</option>
+                          <option value="6">Eläkeläinen</option>
+                          <option value="7">Opiskelija</option>
+                          <option value="8">Taiteilija</option>
+                          <option value="9">Joku muu</option>
+                        </select>
+                      </label>
+                    </li>
+                  </div>
+                  <div className="right">
+                    <li>
+                      <label>
+                        Koulutus: <br />
+                        <input type="text" name="koulutus" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Uskonnollinen yhteisö:
+                        <br />
+                        <input type="text" name="uskonnollinen_yhteisö" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Poliittinen kokemus:
+                        <br />
+                        <input type="text" name="poliittinen_kokemus" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Poliittisen puolueen jäsen: <br />{" "}
+                        <select name="poliittisenjasen">
+                          <option value="1">Kyllä</option>
+                          <option value="0">Ei</option>
+                        </select>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Käytän vaaleihin rahaa:
+                        <br />
+                        <input type="text" name="käytän_vaaleihin_rahaa" />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Ulkopuolisen rahoituksen osuus:
+                        <br />
+                        <input
+                          type="text"
+                          name="ulkopuolisen_rahoituksen_osuus"
+                        />
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        Vuositulot: <br />
+                        <input type="text" name="vuositulot" />
+                      </label>
+                    </li>
+                  </div>
+                </ul>
+              </div>
 
               <table>
                 <tbody>
