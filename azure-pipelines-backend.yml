@@ -33,6 +33,12 @@ steps:
     SourceFolder: 'eduskuntatulokset/target/'
     targetFolder: '$(build.artifactStagingDirectory)'
 
+- task: CopyFiles@1
+  inputs:
+    contents: 'Web.config'
+    SourceFolder: 'eduskuntatulokset/src/main/'
+    targetFolder: '$(build.artifactStagingDirectory)'
+
 
 - task: ArchiveFiles@2
   inputs:
