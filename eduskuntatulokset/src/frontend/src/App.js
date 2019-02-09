@@ -10,6 +10,12 @@ class App extends Component {
     super(props);
     this.formRef = React.createRef();
 
+    this.state = {
+      done: false,
+      gotin: false,
+      percent: ""
+    };
+
     this.goToFormStart = this.goToFormStart.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -19,7 +25,12 @@ class App extends Component {
     element.scrollIntoView({ behavior: "smooth" });
   }
 
-  onSubmit() {}
+  onSubmit() {
+    this.setState({ done: true, gotin: true });
+
+    const score = document.getElementById("score");
+    score.scrollIntoView({ behavior: "smooth" });
+  }
 
   render() {
     return (
@@ -174,35 +185,45 @@ class App extends Component {
                 </div>
               </ul>
 
-<<<<<<< Updated upstream
               <ul>
-                {data["multichoice"].map((label) => {
-                    return <li><label>
-                        {label}: 
-                        <input type="radio" name="täysin_samaa_mieltä"/>Täysin samaa mieltä
-                        <input type="radio" name="jokseenkin_samaa_mieltä"/> Jokseenkin samaa mieltä
-                        <input type="radio" name="jokseenkin_eri_mieltä"/> Jokseenkin eri mieltä
-                        <input type="radio" name="täysin_eri_mieltä"/> Täysin eri mieltä
-                        <input type="radio" name="ohita_kysymys"/> Ohita kysymys
+                {data["multichoice"].map(label => {
+                  return (
+                    <li>
+                      <label>
+                        {label}:
+                        <input type="radio" name="täysin_samaa_mieltä" />
+                        Täysin samaa mieltä
+                        <input
+                          type="radio"
+                          name="jokseenkin_samaa_mieltä"
+                        />{" "}
+                        Jokseenkin samaa mieltä
+                        <input type="radio" name="jokseenkin_eri_mieltä" />{" "}
+                        Jokseenkin eri mieltä
+                        <input type="radio" name="täysin_eri_mieltä" /> Täysin
+                        eri mieltä
+                        <input type="radio" name="ohita_kysymys" /> Ohita
+                        kysymys
                       </label>
-                      </li>
-                  })
-                }
+                    </li>
+                  );
+                })}
               </ul>
 
               <ul>
-                {data["yesno"].map((label) => {
-                  return <li><label>
-                    {label}: 
-                      <select>
+                {data["yesno"].map(label => {
+                  return (
+                    <li>
+                      <label>
+                        {label}:
+                        <select>
                           <option value="kyllä">Kyllä</option>
                           <option value="ei">Ei</option>
                         </select>
-                  </label>
-
-                  </li>
-                  })
-                }
+                      </label>
+                    </li>
+                  );
+                })}
               </ul>
 
               <p className="sub-title">Työ</p>
@@ -211,24 +232,24 @@ class App extends Component {
               <p className="sub-title">Terveys</p>
               <p className="sub-title">Tulevaisuus</p>
               <p className="sub-title">Äänestykset</p>
-=======
-              <div className="questions">
-                <p className="sub-title">Työ</p>
-                <p className="sub-title">Talous</p>
-                <p className="sub-title">Turvallisuus</p>
-                <p className="sub-title">Terveys</p>
-                <p className="sub-title">Tulevaisuus</p>
-                <p className="sub-title">Äänestykset</p>
-              </div>
-
-              <button className="submit" onClick={this.onSubmit} />
->>>>>>> Stashed changes
             </form>
+            <button className="submit" onClick={this.onSubmit}>
+              Katso tulos
+            </button>
           </div>
         </div>
-        <div className="score">
-          <h1>Onnittelut</h1>
+        <div className="score" id="score">
+          {this.state.gotin ? (
+            <div className="succeeded">
+              <h1>Onneksi olkoon</h1>
+            </div>
+          ) : (
+            <div className="failed">
+              <h1>Valitettavasti et olisi päässyt eduskuntaan</h1>
+            </div>
+          )}
         </div>
+        )}
       </div>
     );
   }
