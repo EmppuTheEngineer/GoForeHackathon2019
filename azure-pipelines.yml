@@ -29,7 +29,8 @@ steps:
 #Reactjuddu
 - task: CopyFiles@2
   inputs:
-    contents: 'eduskuntatulokset/src/frontend/build/*'
+    contents: '**'
+    sourceFolder: 'eduskuntatulokset/src/frontend/build/'
     targetFolder: '$(build.artifactStagingDirectory)'
 
 - task: ArchiveFiles@2
