@@ -21,13 +21,13 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-- task: CopyFiles@2
+- task: CopyFiles@1
   inputs:
     contents: '**/*.jar'
     targetFolder: '$(build.artifactStagingDirectory)'
 
 #Reactjuddu
-- task: CopyFiles@2
+- task: CopyFiles@1
   inputs:
     contents: '**'
     sourceFolder: 'eduskuntatulokset/src/frontend/build/'
