@@ -96,3 +96,11 @@ li {
   width: 500px;
   height: 500px;
 }
+
+table th{
+  padding-right: 1em;
+}
+
+table td input{
+  margin: 0 2em;
+}

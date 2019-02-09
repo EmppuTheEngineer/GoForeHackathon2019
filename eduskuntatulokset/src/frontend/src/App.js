@@ -64,7 +64,6 @@ class App extends Component {
           <div className="questions">
             <form>
               <p className="sub-title">Perustiedot</p>
-<<<<<<< Updated upstream
 
               <ul>
                 <div className="left">
@@ -196,151 +195,32 @@ class App extends Component {
                 </div>
               </ul>
 
-=======
-              <div className="container">
-                <ul>
-                  <div className="left">
-                    <li>
-                      <label>
-                        Vaalipiiri: <br />
-                        <input type="text" name="vaalipiiri" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Puolue: <br />
-                        <input type="text" name="puolue" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Ikä: <br />
-                        <input type="text" name="ikä" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Sukupuoli: <br />
-                        <select name="toimii_kansanedustajana">
-                          <option value="nainen">Nainen</option>
-                          <option value="mies">Mies</option>
-                        </select>
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Toimin tällä hetkellä kansanedustajana:
-                        <br />
-                        <select name="toimii_kansanedustajana">
-                          <option value="kyllä">Kyllä</option>
-                          <option value="ei">Ei</option>
-                        </select>
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Kotikunta: <br />
-                        <input type="text" name="kotikunta" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Äidinkieli: <br />
-                        <input type="text" name="äidinkieli" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Työnantaja: <br />
-                        <input type="text" name="työnantaja" />
-                      </label>
-                    </li>
-                  </div>
-                  <div className="right">
-                    <li>
-                      <label>
-                        Ammattiasema: <br />
-                        <input type="text" name="ammattiasema" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Koulutus: <br />
-                        <input type="text" name="koulutus" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Uskonnollinen yhteisö:
-                        <br />
-                        <input type="text" name="uskonnollinen_yhteisö" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Poliittinen kokemus:
-                        <br />
-                        <input type="text" name="poliittinen_kokemus" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Käytän vaaleihin rahaa:
-                        <br />
-                        <select name="käytän_vaaleihin_rahaa">
-                          <option value="kyllä">Kyllä</option>
-                          <option value="ei">Ei</option>
-                        </select>
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Käytän vaaleihin rahaa:
-                        <br />
-                        <input type="text" name="käytän_vaaleihin_rahaa" />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Ulkopuolisen rahoituksen osuus:
-                        <br />
-                        <input
-                          type="text"
-                          name="ulkopuolisen_rahoituksen_osuus"
-                        />
-                      </label>
-                    </li>
-                    <li>
-                      <label>
-                        Vuositulot: <br />
-                        <input type="text" name="vuositulot" />
-                      </label>
-                    </li>
-                  </div>
-                </ul>
-              </div>
->>>>>>> Stashed changes
+<<<<<<< HEAD
               <ul>
+=======
+              <table>
+              <tbody>
+              <tr>
+              <th>Kysymys</th>
+              <th>Samaa mieltä ... Eri mieltä</th>
+              <th>Ohita kysymys:</th>
+              </tr>
+
+>>>>>>> Radio button styling
                 {data["multichoice"].map((label, index) => {
                   return (
-                    <li>
-                      <label>
-                        {label}:
-                        <input type="radio" name={index} value="5" />Täysin samaa mieltä
-                        Täysin samaa mieltä
-                        <input type="radio" name={index} value="4" /> Jokseenkin samaa mieltä{" "}
-                        Jokseenkin samaa mieltä
-                        <input type="radio" name={index} value="3" /> Jokseenkin eri mieltä{" "}
-                        Jokseenkin eri mieltä
-                        <input type="radio" name={index} value="2" /> Täysin eri mieltä
-                        <input type="radio" name={index} value="1" /> Ohita
-                        kysymys
-
-                      </label>
-                    </li>
+                    <tr>
+                        <td>{label}:</td>
+                        <td> <input className="form-radio" type="radio" name={index} value="5" />
+                        <input type="radio" name={index} value="4" />
+                        <input type="radio" name={index} value="3" />
+                        <input type="radio" name={index} value="2" /></td>
+                        <td><input type="radio" name={index} value="1" /></td>
+                    </tr>
                   );
                 })}
-              </ul>
+              </tbody>
+              </table>
 
               <ul>
 
