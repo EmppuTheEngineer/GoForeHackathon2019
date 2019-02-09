@@ -139,6 +139,36 @@ class App extends Component {
 
               </ul>
 
+              <ul>
+                {data["multichoice"].map((label) => {
+                    return <li><label>
+                        {label}: 
+                        <input type="radio" name="täysin_samaa_mieltä"/>Täysin samaa mieltä
+                        <input type="radio" name="jokseenkin_samaa_mieltä"/> Jokseenkin samaa mieltä
+                        <input type="radio" name="jokseenkin_eri_mieltä"/> Jokseenkin eri mieltä
+                        <input type="radio" name="täysin_eri_mieltä"/> Täysin eri mieltä
+                        <input type="radio" name="ohita_kysymys"/> Ohita kysymys
+                      </label>
+                      </li>
+                  })
+                }
+              </ul>
+
+              <ul>
+                {data["yesno"].map((label) => {
+                  return <li><label>
+                    {label}: 
+                      <select>
+                          <option value="kyllä">Kyllä</option>
+                          <option value="ei">Ei</option>
+                        </select>
+                  </label>
+
+                  </li>
+                  })
+                }
+              </ul>
+
               <p className="sub-title">Työ</p>
               <p className="sub-title">Talous</p>
               <p className="sub-title">Turvallisuus</p>
