@@ -1,22 +1,16 @@
 package com.example.eduskuntatulokset.models;
 
+import java.util.List;
+
 public class Answers {
-    private String name;
-    private Integer age;
+    private List <String> answers;
 
-    public String getName() {
-        return name;
+    public List<String> getAnswers() {
+        return answers;
     }
 
-    public void setName(String newname) {
-        name = newname;
+    public void setAnswers(List<String> ans) {
+        answers = ans;
     }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer newAge) {
-        age = newAge;
-    }
+    
 }
