@@ -26,6 +26,12 @@ steps:
     contents: '**/*.jar'
     targetFolder: '$(build.artifactStagingDirectory)'
 
+#Reactjuddu
+- task: CopyFiles@2
+  inputs:
+    contents: 'eduskuntatulokset/src/frontend/build/*'
+    targetFolder: '$(build.artifactStagingDirectory)'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(build.artifactStagingDirectory)'
