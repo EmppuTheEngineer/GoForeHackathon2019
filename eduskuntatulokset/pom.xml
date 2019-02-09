@@ -50,7 +50,7 @@
 
                      <!-- Web App information -->
                      <resourceGroup>"sinustakokansanedustajaksi"</resourceGroup>
-                     <appName>"sinustakokansanedustajaksi"</appName>
+                     <appName>"sinustakokansanedustajaksiback"</appName>
                      <region>"centralus"</region>
 
                      <!-- Java Runtime Stack for Web App on Linux-->
