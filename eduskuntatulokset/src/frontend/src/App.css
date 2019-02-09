@@ -1,16 +1,47 @@
 .App {
-  text-align: center;
+  text-align: left;
+}
+
+h1 {
+  color: darkblue;
 }
 
 .lander {
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
+  margin-top: 30vh;
+  padding: 0% 20%;
   border-bottom: 1px solid black;
 }
 
+.left-text {
+  width: 40%;
+  float: left;
+}
+
+.right-img {
+  width: 20%;
+  float: left;
+}
+
+.front-img {
+  width: 500px;
+  height: 500px;
+}
+
 .begin{
-  width: 150px;
+  width: 250px;
   height: 50px;
+  background-color: white;
+  border: 2px solid darkblue;
+  border-radius: 30px;
+  font-size: 1.5em;
+}
+
+.begin:hover {
+  background-color: darkblue;
+  border: 2px solid darkblue;
+  color: white;
 }
 
 .questionaire {

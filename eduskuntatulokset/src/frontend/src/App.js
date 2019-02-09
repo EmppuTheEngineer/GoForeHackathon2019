@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import sad from "./images/et_paassyt.svg";
+import happy from "./images/paasit.svg";
+import front from "./images/etusivu.svg";
 import "./App.css";
 
 class App extends Component {
@@ -16,21 +19,26 @@ class App extends Component {
     return (
       <div className="App">
         <div className="lander">
-          <h1>GoForen Vaalikone</h1>
-          <p>
-            Pääsisitkö eduskuntaan? <br />
-            Nopealla vaalikoneella voit testata olisiko sinut valittu vuoden
-            2015 vaaleissa ja arvion siitä miten hyvin olisit sopinut
-            eduskuntaan. <br />
-          </p>
-          <p>
-            Data perustuu Ylen Vaalikoneen vastauksiin, joita on verrattu
-            vaaleissa valittuihin ehdokkaisiin.
-          </p>
-          <p>Onko sinusta eduskunta materiaalia?</p>
-          <button className="begin" onClick={this.goToFormStart}>
-            Aloita kysely
-          </button>
+          <div className="left-text">
+            <h1>GoForen Vaalikone</h1>
+            <p>
+              Pääsisitkö eduskuntaan? <br />
+              Nopealla vaalikoneella voit testata olisiko sinut valittu vuoden
+              2015 vaaleissa ja arvion siitä miten hyvin olisit sopinut
+              eduskuntaan. <br />
+            </p>
+            <p>
+              Data perustuu Ylen Vaalikoneen vastauksiin, joita on verrattu
+              vaaleissa valittuihin ehdokkaisiin.
+            </p>
+            <p>Onko sinusta eduskunta materiaalia?</p>
+            <button className="begin" onClick={this.goToFormStart}>
+              Aloita kysely
+            </button>
+          </div>
+          <div className="right-img">
+            <img src={front} className="front-img" />
+          </div>
         </div>
         <div className="questionaire" id="form" ref={this.formRef}>
           <div className="progress">
