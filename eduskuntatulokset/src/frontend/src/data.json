@@ -1,5 +1,14 @@
 {
     "personal": [
         "vaalipiiri","sukunimi","etunimi","puolue","ikä","sukupuoli","Toimin tällä hetkellä kansanedustajana","kotikunta","Äidinkieli","Työnantaja","Ammattiasema","Koulutus","Uskonnollinen yhteisö","Poliittisen puolueen jäsen","Poliittinen kokemus","Käytän vaaleihin rahaa","Ulkopuolisen rahoituksen osuus", "Vuositulot"
+    ],
+
+    "multichoice": [
+        "Suomessa on liian helppo elää sosiaaliturvan varassa","Kaupan ja muiden liikkeiden aukioloajat on vapautettava","Suomessa on siirryttävä perustuloon joka korvaisi nykyisen sosiaaliturvan vähimmäistason","Työntekijälle on turvattava lailla minimityöaika","Ansiosidonnaisen työttömyysturvan kestoa pitää lyhentää","Euron ulkopuolella Suomi pärjäisi paremmin","Valtion ja kuntien taloutta on tasapainotettava ensisijaisesti leikkaamalla menoja","Lapsilisiä on korotettava ja laitettava verolle","Suomella ei ole varaa nykyisen laajuisiin sosiaali- ja terveyspalveluihin","Nato-jäsenyys vahvistaisi Suomen turvallisuuspoliittista asemaa","Suomeen tarvitaan enemmän poliiseja","Maahanmuuttoa Suomeen on rajoitettava terrorismin uhan vuoksi","Venäjän etupiiripolitiikka on uhka Suomelle","Verkkovalvonnassa valtion turvallisuus on tärkeämpää kuin kansalaisten yksityisyyden suoja","Suomen on osallistuttava Isisin vastaiseen taisteluun kouluttamalla Irakin hallituksen joukkoja","Parantumattomasti sairaalla on oltava oikeus avustettuun kuolemaan","Terveys- ja sosiaalipalvelut on tuotettava ensijaisesti julkisina palveluina","Viranomaisten pitää puuttua lapsiperheiden ongelmiin nykyistä herkemmin","Vanhuksen ja hänen omaistensa vastuuta hoitokustannuksista on lisättävä","Ilmastonmuutoksen hillitseminen pitää asettaa teollisuuden kilpailukyvyn edelle","Suomen pitää ottaa suurempi vastuu EU:n alueelle tulevista turvapaikanhakijoista","On aika luopua ajatuksesta että koko Suomi on pidettävä asuttuna"
+
+    ],
+
+    "yesno": [
+        "Suomen Nato-jäsenyydestä on järjestettävä kansanäänestys","Hyväksytään periaatepäätös uuden ydinvoimalaitosyksikön rakentamisesta","Tuloveroa alennetaan tasaisesti kaikissa tuloluokissa talouden elvyttämiseksi","Edellisen eduskunnan hyväksymä lainmuutos samaa sukupuolta olevien avioliiton sallimisesta peruutetaan","Mietojen viinien ja vahvojen oluiden myynti ruokakaupassa sallitaan","Ruotsin kielen opiskelu muutetaan vapaaehtoiseksi"
     ]
 }
