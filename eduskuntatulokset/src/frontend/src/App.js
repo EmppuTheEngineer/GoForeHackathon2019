@@ -3,6 +3,7 @@ import sad from "./images/et_paassyt.svg";
 import happy from "./images/paasit.svg";
 import front from "./images/etusivu.svg";
 import "./App.css";
+const data = require("./data.json");
 
 class App extends Component {
   constructor(props) {
@@ -47,9 +48,16 @@ class App extends Component {
           <div className="questions">
             <form>
               <p className="sub-title">Perustiedot</p>
-              <label>
-                Nimi: <input type="text" name="name" />
-              </label>
+
+              <ul>
+                {data["personal"].map((label) => {
+                    return <li><label>
+                        {label}: <input type="text" name={label} />
+                      </label>
+                      </li>
+                  })
+                }
+              </ul>
 
               <p className="sub-title">Työ</p>
               <p className="sub-title">Talous</p>
