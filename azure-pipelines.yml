@@ -10,20 +10,11 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'eduskuntatulokset/pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
 
 - task: CopyFiles@1
   inputs:
-    contents: '**/*.jar'
+    contents: '**'
+    SourceFolder: 'eduskuntatulokset/src/frontend/'
     targetFolder: '$(build.artifactStagingDirectory)'
 
 - task: ArchiveFiles@2
