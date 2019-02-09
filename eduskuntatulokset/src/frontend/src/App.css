@@ -6,6 +6,8 @@ h1 {
   color: darkblue;
 }
 
+/* Intro page */
+
 .lander {
   height: 70vh;
   width: 100vw;
@@ -29,6 +31,8 @@ h1 {
   height: 500px;
 }
 
+/* Form */
+
 .begin{
   width: 250px;
   height: 50px;
@@ -46,9 +50,23 @@ h1 {
 
 .questionaire {
   height: 1500px;
-  border-bottom: 3px solid red;
+  width: 100vw;
+  padding: 0% 20%;
+  border-bottom: 1px solid black;
 }
 
 .sub-title {
   font-size: 20px;
 }
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 5px;
+}
+
+
+/* End */
+

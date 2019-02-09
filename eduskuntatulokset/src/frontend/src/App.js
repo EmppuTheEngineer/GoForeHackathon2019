@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import sad from "./images/et_paassyt.svg";
 import happy from "./images/paasit.svg";
-import front from "./images/Etusivu.svg";
+import front from "./images/etusivu.svg";
 import "./App.css";
 const data = require("./data.json");
 
@@ -9,12 +9,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.formRef = React.createRef();
+
+    this.goToFormStart = this.goToFormStart.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   goToFormStart() {
     const element = document.getElementById("form");
     element.scrollIntoView({ behavior: "smooth" });
   }
+
+  onSubmit() {}
 
   render() {
     return (
@@ -50,29 +55,38 @@ class App extends Component {
               <p className="sub-title">Perustiedot</p>
 
               <ul>
+                <div className="left">
                   <li>
                     <label>
-                        Vaalipiiri: <input type="text" name="vaalipiiri" />
+                      Vaalipiiri: <br />
+                      <input type="text" name="vaalipiiri" />
                     </label>
                   </li>
                   <li>
                     <label>
-                        Puolue: <input type="text" name="puolue" />
+                      Puolue: <br />
+                      <input type="text" name="puolue" />
                     </label>
                   </li>
                   <li>
                     <label>
-                        Ikä: <input type="text" name="ikä" />
+                      Ikä: <br />
+                      <input type="text" name="ikä" />
                     </label>
                   </li>
                   <li>
                     <label>
-                        Sukupuoli: <input type="text" name="sukupuoli" />
+                      Sukupuoli: <br />
+                      <select name="toimii_kansanedustajana">
+                        <option value="nainen">Nainen</option>
+                        <option value="mies">Mies</option>
+                      </select>
                     </label>
                   </li>
                   <li>
                     <label>
-                      Toimin tällä hetkellä kansanedustajana: <select name="toimii_kansanedustajana">
+                      Toimin tällä hetkellä kansanedustajana:{" "}
+                      <select name="toimii_kansanedustajana">
                         <option value="kyllä">Kyllä</option>
                         <option value="ei">Ei</option>
                       </select>
@@ -80,42 +94,55 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                      Kotikunta: <input type="text" name="kotikunta" />
+                      Kotikunta: <br />
+                      <input type="text" name="kotikunta" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      Äidinkieli: <input type="text" name="äidinkieli" />
+                      Äidinkieli: <br />
+                      <input type="text" name="äidinkieli" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      Työnantaja: <input type="text" name="työnantaja" />
+                      Työnantaja: <br />
+                      <input type="text" name="työnantaja" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      Ammattiasema: <input type="text" name="ammattiasema" />
+                      Ammattiasema: <br />
+                      <input type="text" name="ammattiasema" />
+                    </label>
+                  </li>
+                </div>
+                <div className="right">
+                  <li>
+                    <label>
+                      Koulutus: <br />
+                      <input type="text" name="koulutus" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      Koulutus: <input type="text" name="koulutus" />
+                      Uskonnollinen yhteisö:
+                      <br />
+                      <input type="text" name="uskonnollinen_yhteisö" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      Uskonnollinen yhteisö: <input type="text" name="uskonnollinen_yhteisö" />
+                      Poliittinen kokemus:
+                      <br />
+                      <input type="text" name="poliittinen_kokemus" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      Poliittinen kokemus: <input type="text" name="poliittinen_kokemus" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      Käytän vaaleihin rahaa: <select name="käytän_vaaleihin_rahaa">
+                      Käytän vaaleihin rahaa:
+                      <br />
+                      <select name="käytän_vaaleihin_rahaa">
                         <option value="kyllä">Kyllä</option>
                         <option value="ei">Ei</option>
                       </select>
@@ -123,22 +150,31 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                      Käytän vaaleihin rahaa: <input type="text" name="käytän_vaaleihin_rahaa" />
+                      Käytän vaaleihin rahaa:
+                      <br />
+                      <input type="text" name="käytän_vaaleihin_rahaa" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      Ulkopuolisen rahoituksen osuus: <input type="text" name="ulkopuolisen_rahoituksen_osuus" />
+                      Ulkopuolisen rahoituksen osuus:
+                      <br />
+                      <input
+                        type="text"
+                        name="ulkopuolisen_rahoituksen_osuus"
+                      />
                     </label>
                   </li>
                   <li>
                     <label>
-                      Vuositulot: <input type="text" name="vuositulot" />
+                      Vuositulot: <br />
+                      <input type="text" name="vuositulot" />
                     </label>
                   </li>
-
+                </div>
               </ul>
 
+<<<<<<< Updated upstream
               <ul>
                 {data["multichoice"].map((label) => {
                     return <li><label>
@@ -175,6 +211,18 @@ class App extends Component {
               <p className="sub-title">Terveys</p>
               <p className="sub-title">Tulevaisuus</p>
               <p className="sub-title">Äänestykset</p>
+=======
+              <div className="questions">
+                <p className="sub-title">Työ</p>
+                <p className="sub-title">Talous</p>
+                <p className="sub-title">Turvallisuus</p>
+                <p className="sub-title">Terveys</p>
+                <p className="sub-title">Tulevaisuus</p>
+                <p className="sub-title">Äänestykset</p>
+              </div>
+
+              <button className="submit" onClick={this.onSubmit} />
+>>>>>>> Stashed changes
             </form>
           </div>
         </div>
