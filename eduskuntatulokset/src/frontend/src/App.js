@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import sad from "./images/et_paassyt.svg";
 import happy from "./images/paasit.svg";
-import front from "./images/Etusivu.svg";
+import front from "./images/etusivu.svg";
 import "./App.css";
 const data = require("./data.json");
 
@@ -87,16 +87,17 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                        Sukupuoli: <br /> <select name="sukupuoli">
+                      Sukupuoli: <br />{" "}
+                      <select name="sukupuoli">
                         <option value="1">M</option>
                         <option value="0">F</option>
-
                       </select>
                     </label>
                   </li>
                   <li>
                     <label>
-                      Toimin tällä hetkellä kansanedustajana: <select name="toimii_kansanedustajana">
+                      Toimin tällä hetkellä kansanedustajana:{" "}
+                      <select name="toimii_kansanedustajana">
                         <option value="1">Kyllä</option>
                         <option value="0">Ei</option>
                       </select>
@@ -116,7 +117,8 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                      Työnantaja: <br/><select name="tyonantaja">
+                      Työnantaja: <br />
+                      <select name="tyonantaja">
                         <option value="0">Julkinen</option>
                         <option value="1">Yksityinen</option>
                         <option value="2">Ei työelämässä</option>
@@ -125,8 +127,11 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                      Ammattiasema: <br /> <select name="ammattiasema">
-                        <option value="0">Korkeakoulututkintoa vaativa tehtävä </option>
+                      Ammattiasema: <br />{" "}
+                      <select name="ammattiasema">
+                        <option value="0">
+                          Korkeakoulututkintoa vaativa tehtävä{" "}
+                        </option>
                         <option value="1">Asiantuntijatehtävä</option>
                         <option value="2">Työntekijä </option>
                         <option value="3">Maanviljelijä</option>
@@ -163,7 +168,8 @@ class App extends Component {
                   </li>
                   <li>
                     <label>
-                      Poliittisen puolueen jäsen: <br /> <select name="poliittisenjasen">
+                      Poliittisen puolueen jäsen: <br />{" "}
+                      <select name="poliittisenjasen">
                         <option value="1">Kyllä</option>
                         <option value="0">Ei</option>
                       </select>
@@ -195,35 +201,40 @@ class App extends Component {
                 </div>
               </ul>
 
-<<<<<<< HEAD
-              <ul>
-=======
               <table>
-              <tbody>
-              <tr>
-              <th>Kysymys</th>
-              <th>Samaa mieltä ... Eri mieltä</th>
-              <th>Ohita kysymys:</th>
-              </tr>
+                <tbody>
+                  <tr>
+                    <th>Kysymys</th>
+                    <th>Samaa mieltä ... Eri mieltä</th>
+                    <th>Ohita kysymys:</th>
+                  </tr>
 
->>>>>>> Radio button styling
-                {data["multichoice"].map((label, index) => {
-                  return (
-                    <tr>
+                  {data["multichoice"].map((label, index) => {
+                    return (
+                      <tr>
                         <td>{label}:</td>
-                        <td> <input className="form-radio" type="radio" name={index} value="5" />
-                        <input type="radio" name={index} value="4" />
-                        <input type="radio" name={index} value="3" />
-                        <input type="radio" name={index} value="2" /></td>
-                        <td><input type="radio" name={index} value="1" /></td>
-                    </tr>
-                  );
-                })}
-              </tbody>
+                        <td>
+                          {" "}
+                          <input
+                            className="form-radio"
+                            type="radio"
+                            name={index}
+                            value="5"
+                          />
+                          <input type="radio" name={index} value="4" />
+                          <input type="radio" name={index} value="3" />
+                          <input type="radio" name={index} value="2" />
+                        </td>
+                        <td>
+                          <input type="radio" name={index} value="1" />
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
               </table>
 
               <ul>
-
                 {data["yesno"].map(label => {
                   return (
                     <li>
@@ -232,24 +243,12 @@ class App extends Component {
                         <select>
                           <option value="kyllä">Kyllä</option>
                           <option value="ei">Ei</option>
-
                         </select>
                       </label>
                     </li>
                   );
                 })}
               </ul>
-<<<<<<< Updated upstream
-
-              <p className="sub-title">Työ</p>
-              <p className="sub-title">Talous</p>
-              <p className="sub-title">Turvallisuus</p>
-              <p className="sub-title">Terveys</p>
-              <p className="sub-title">Tulevaisuus</p>
-              <p className="sub-title">Äänestykset</p>
-              <input type="submit" value="Submit"></input>
-=======
->>>>>>> Stashed changes
             </form>
             <button className="submit begin" onClick={this.onSubmit}>
               Katso tulos
