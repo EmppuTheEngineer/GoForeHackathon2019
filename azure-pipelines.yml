@@ -26,7 +26,16 @@ steps:
     contents: '**/*.jar'
     targetFolder: '$(build.artifactStagingDirectory)'
 
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(build.artifactStagingDirectory)'
+    includeRootFolder: true 
+    archiveType: 'zip'
+    archiveFile: '$(build.artifactStagingDirectory)/$(Build.BuildId).zip' 
+    replaceExistingArchive: true
+
+
 - task: PublishBuildArtifacts@1
   inputs:
-    artifactName: 'jar'
+    artifactName: 'zip'
     pathToPublish: '$(build.artifactStagingDirectory)'
